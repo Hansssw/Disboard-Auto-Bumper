@@ -27,7 +27,7 @@ async def on_ready():
     for guild in botReceive.guilds:
         print("  [!] Server Name: " + str(guild.name) + " | Server ID: " + str(guild.id))
 
-    # Initializing channel where to send !d bump
+    # Initializing channel where to send /d bump
     # Example: fetch_channel("855039765711552515")
     print ("DISCORD_SERVER_CHANNEL_ID: " + str(os.getenv("DISCORD_SERVER_CHANNEL_ID")))
     print ("DISCORD_SERVER_CHANNEL_NAME: #" + str(await botReceive.fetch_channel(os.getenv("DISCORD_SERVER_CHANNEL_ID"))))
@@ -39,7 +39,7 @@ async def on_ready():
     # Some Loop Testing
     while True:
         await channel.send("found channel")
-        await channel.send("!d bump")
+        await channel.send("/d bump")
         time.sleep(8125) # 8125 seconds == 2 hours
         
         
